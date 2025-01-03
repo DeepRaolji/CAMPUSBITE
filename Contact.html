@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Campus Bite</title>
+
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Import Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#faf4e8',
+                        foreground: '#4a3b2e',
+                        primary: '#f2c68b',
+                        'primary-foreground': '#3f2f1f',
+                        secondary: '#e0d7c1',
+                        'secondary-foreground': '#5c4a34',
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Consolidated styles */
+        img[src="/placeholder.svg"],
+        img[src="/placeholder-user.jpg"] {
+            filter: sepia(.3) hue-rotate(-24deg) saturate(.5) opacity(0.8);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-foreground">
+    <header class="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between">
+        <a class="flex items-center gap-2" href="/index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="h-8 w-8">
+                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                <path d="M7 2v20"></path>
+                <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+            </svg>
+            <span class="text-2xl font-bold">Campus Bite</span>
+        </a>
+        <nav class="flex items-center gap-4">
+            <a class="text-sm font-medium hover:underline" href="/index.html" target="_self">Back to Home</a>
+        </nav>
+    </header>
+
+    <main class="flex flex-col items-center p-6">
+        <section class="max-w-2xl mx-auto my-8">
+            <h1 class="text-3xl font-bold mb-6">Contact Us</h1>
+
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Contact Numbers</h2>
+                <ul class="list-disc list-inside">
+                    <li>+91 97128 71557</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-semibold mb-2">Email Addresses</h2>
+                <ul class="list-disc list-inside">
+                    <li><a href="mailto:2202021000377@silveroakuni.ac.in" class="text-primary hover:underline">2202021000377@silveroakuni.ac.in</a></li>
+                </ul>
+            </div>
+
+            <!-- Optional: Add a Contact Form -->
+            <div class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Send Us a Message</h2>
+                <form action="#" method="POST" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="mt-1 block w-full px-4 py-2 bg-secondary text-secondary-foreground border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="mt-1 block w-full px-4 py-2 bg-secondary text-secondary-foreground border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="mt-1 block w-full px-4 py-2 bg-secondary text-secondary-foreground border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit"
+                            class="px-6 py-2 bg-primary text-primary-foreground font-semibold rounded-md hover:bg-primary-foreground hover:text-primary transition-colors">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary text-secondary-foreground py-4 text-center">
+        <p>&copy; 2024 Campus Bite. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

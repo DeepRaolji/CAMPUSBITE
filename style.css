@@ -1,0 +1,110 @@
+/* General card styles */
+.menu-card {
+    background-color: var(--card-background, #ffffff); /* Default card background */
+    color: var(--card-foreground, #333); /* Default card text color */
+    border: 1px solid var(--card-border, #ddd); /* Light border for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for some depth */
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.menu-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow on hover */
+}
+
+/* Image styling */
+.menu-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the given space */
+}
+
+/* Content inside the card */
+.menu-card .p-6 {
+    padding: 1.5rem;
+}
+
+/* Title and Price */
+.menu-card h3 {
+    font-size: 1.25rem; /* Large font for the title */
+    font-weight: 600;
+    margin: 0; /* Remove extra margins */
+    color: var(--title-color, #333); /* Title color */
+}
+
+.menu-card .text-primary {
+    color: var(--primary-color, #007bff); /* Price color */
+    font-weight: 600;
+}
+
+/* Description text */
+.menu-card .text-muted-foreground {
+    color: var(--muted-color, #6c757d); /* Muted color for description */
+    margin-top: 0.5rem;
+}
+
+/* Tags (Vegetarian, Gluten-free, etc.) */
+.menu-card .flex.items-center.gap-2.mt-2 .inline-flex {
+    background-color: var(--secondary-bg, #f1f1f1); /* Background for tags */
+    color: var(--secondary-foreground, #444); /* Text color for tags */
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px; /* Makes the tags rounded */
+}
+
+/* Button styles */
+.menu-card button {
+    background-color: var(--primary-color, #007bff); /* Button background color */
+    color: var(--button-foreground, #fff); /* Button text color */
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.menu-card button:hover {
+    background-color: var(--primary-color-hover, #0056b3); /* Darker blue on hover */
+}
+
+.menu-card button:disabled {
+    background-color: var(--disabled-bg, #e0e0e0); /* Gray background when disabled */
+    color: var(--disabled-text, #bdbdbd); /* Lighter gray for disabled text */
+    cursor: not-allowed;
+}
+
+/* Responsive grid system */
+#menu-list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit for responsiveness */
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 640px) {
+    #menu-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    #menu-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #menu-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
