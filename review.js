@@ -42,14 +42,14 @@ const itemList = [
         tags: ["Spicy", "Vegetarian", "Mexican", "Burger"]
     },
     {
-        title: "Margarita pizza",
+        title: "Classic Maggi",
         imgSrc: "/images/Cheese Maggi.jpg",
         price: 50,
         desc: "Classic Maggi noodles cooked with gooey melted cheese for a rich, creamy flavor.",
         tags: ["Snack", "Comfort Food", "Cheesy", "Vegetarian"]
     },
     {
-        title: "Margarita pizza",
+        title: "Classic nachos",
         imgSrc: "/images/Cheese Nachos.jpg",
         price: 50,
         desc:  "Crunchy nachos topped with creamy melted cheese, perfect for a flavorful snack.",
